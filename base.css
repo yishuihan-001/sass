@@ -1,0 +1,176 @@
+@charset "UTF-8";
+#main {
+  width: 5em; }
+
+#sidebar {
+  width: 5em; }
+
+body.firefox .header:before {
+  content: 'Hi, Firefox users !'; }
+
+p {
+  width: 1.1111111111in; }
+
+/* 
+	以下三种情况 / 将被视为除法运算符号：
+	如果值，或值的一部分，是变量或者函数的返回值
+	如果值被圆括号包裹
+	如果值是算数表达式的一部分
+ */
+p {
+  font: 10px/8px;
+  width: 500px;
+  width: 1;
+  height: 250px;
+  margin-left: 9px; }
+
+p {
+  font: 12px/30px; }
+
+p {
+  cursor: e-resize; }
+
+p:before {
+  content: "Foo Bar";
+  font-family: sans-serif; }
+
+p {
+  margin: 7px auto; }
+
+p:before {
+  content: "I ate 15 pies!"; }
+
+p:before {
+  content: "I ate  pies!"; }
+
+div.slient:hover {
+  color: red; }
+
+a {
+  color: red; }
+
+#main {
+  content: "First content";
+  new-content: "Second time ref !"; }
+
+#main {
+  content: "Non-null content"; }
+
+.sidebar {
+  width: 300px; }
+  @media screen and (orientation: landscape) {
+    .sidebar {
+      width: 500px; } }
+
+@media screen and (orientation: landscape) {
+  .sidebar {
+    width: 500px; } }
+
+@media screen and (-webkit-min-device-pixel-ratio: 1.5) {
+  .sidebar {
+    width: 500px; } }
+a:hover, .hoverlink {
+  text-decoration: underline; }
+
+.comment a.user:hover, .comment .user.hoverlink {
+  font-weight: bold; }
+
+p {
+  border: 1px solid; }
+
+p {
+  color: green; }
+
+.item-1 {
+  width: 2em; }
+
+.item-2 {
+  width: 4em; }
+
+.item-3 {
+  width: 6em; }
+
+.puma-icon {
+  background-image: url("/images/puma.png"); }
+
+.sea-slug-icon {
+  background-image: url("/images/sea-slug.png"); }
+
+.egret-icon {
+  background-image: url("/images/egret.png"); }
+
+.salamander-icon {
+  background-image: url("/images/salamander.png"); }
+
+.puma-icon {
+  background-image: url("/images/puma.png");
+  border: 2px solid black;
+  cursor: default; }
+
+.sea-slug-icon {
+  background-image: url("/images/sea-slug.png");
+  border: 2px solid blue;
+  cursor: pointer; }
+
+.egret-icon {
+  background-image: url("/images/egret.png");
+  border: 2px solid white;
+  cursor: move; }
+
+h1 {
+  font-size: 2em; }
+
+h2 {
+  font-size: 1.5em; }
+
+h3 {
+  font-size: 1.2em; }
+
+.item-6 {
+  width: 12em; }
+
+.item-4 {
+  width: 8em; }
+
+.item-2 {
+  width: 4em; }
+
+.page-title {
+  font-family: Arial;
+  font-size: 20px;
+  font-weight: bold;
+  color: #ff0000;
+  padding: 4px;
+  margin-top: 10px; }
+
+a {
+  color: blue;
+  background-color: red; }
+
+p {
+  border-color: blue;
+  border-width: 1in;
+  border-style: dashed; }
+
+p {
+  border-color: blue;
+  border-width: 1in;
+  border-style: dashed; }
+
+h1 {
+  border-color: blue;
+  border-width: 2in;
+  border-style: dashed; }
+
+/* 关键词参数 */
+p {
+  border-color: blue;
+  border-width: 1in;
+  border-style: dashed; }
+
+h1 {
+  border-color: pink;
+  border-width: 2in;
+  border-style: dashed; }
+
+/*# sourceMappingURL=base.css.map */

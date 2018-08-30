@@ -1,0 +1,158 @@
+@charset "utf-8";
+
+// 变量
+$blue: #1875e7;
+div{
+	color: $blue;
+}
+
+$side: left;
+.rounded{
+	border-#{$side}-radius: 5px;
+}
+
+
+// 计算
+body{
+	margin: (14px / 2);
+	top: 50px + 100px;
+	padding: (20px / 2);
+}
+
+
+// 嵌套
+div{
+	h1{
+		color: red;
+	}
+}
+
+p{
+	border: {
+		color: green;
+	}
+}
+
+a{
+	&:hover{
+		color: #ffb3ff;
+	}
+}
+
+
+// 代码重用
+.class1{
+	border: 1px solid #ddd;
+}
+
+.class2{
+	@extend .class1;
+	font-size: 120%;
+}
+
+
+// 混合
+@mixin left{
+	float: left;
+	margin-left: 10px;
+}
+
+div{
+	@include left;
+}
+
+// mixin的强大之处，在于可以指定参数和缺省值。
+@mixin left($value: 10px){
+	float: left;
+	margin-right: $value;
+}
+
+div{
+	@include left(20px);
+}
+
+
+@mixin rounded($vert, $horz, $radius: 10px) {
+　　border-#{$vert}-#{$horz}-radius: $radius;
+　　-moz-border-radius-#{$vert}#{$horz}: $radius;
+　　-webkit-border-#{$vert}-#{$horz}-radius: $radius;
+}
+
+#navbar li { 
+	@include rounded(top, left); 
+}
+#footer { 
+	@include rounded(top, left, 5px); 
+}
+
+
+// 颜色函数
+// lighten(#cc3, 10%) // #d6d65c
+// darken(#cc3, 10%) // #a3a329
+// grayscale(#cc3) // #808080
+// complement(#cc3) // #33c
+
+
+// 插入文件
+// @import "path/filename.scss";
+// 如果插入的是.css文件，则等同于css的import命令, 即 @import "foo.css";
+
+
+// 条件语句
+// @if可以用来判断：
+p{
+	@if (1 + 1 == 2 ){
+		border: 1px solid red;
+	}
+	@if (5 < 3){
+		border: 2px dotted red;
+	}
+}
+// 配套的还有@else命令
+h3{
+	@if (lightness(#969696) > 30%) {
+	　　background-color: #000;
+	} @else {
+	　　background-color: #fff;
+	}
+}
+
+
+// 循环语句
+// for循环
+// @for $i from 1 to 10 {
+// 　　.border-#{$i} {
+// 　　　　border: #{$i}px solid blue;
+// 　　}
+// }
+
+// while循环
+// $i: 6;
+// @while ($i > 0) {
+// 　　.item-#{$i} { width: 2em * $i; }
+// 　　$i: ($i - 2);
+// }
+
+// each命令，作用与for类似
+// @each $member in a, b, c, d {
+// 　　.#{$member} {
+// 　　　　background-image: url("/image/#{$member}.jpg");
+// 　　}
+// }
+
+
+// SASS允许用户编写自己的函数
+// @function double($n) {
+// 　　@return $n * 2;
+// }
+
+// #sidebar {
+// 　　width: double(5px);
+// }
+
+
+
+
+
+
+
